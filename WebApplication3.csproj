@@ -1,0 +1,627 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E935DEC-6E9F-4330-85CA-9E5E00A800EE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication3</RootNamespace>
+    <AssemblyName>WebApplication3</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Contact.html" />
+    <Content Include="FileSaver.js" />
+    <Content Include="HtmlPage1.html" />
+    <Content Include="HtmlPage2.html" />
+    <Content Include="JavaScript.js" />
+    <Content Include="jquery.js" />
+    <Content Include="js-xlsx-master\bits\00_header.js" />
+    <Content Include="js-xlsx-master\bits\01_version.js" />
+    <Content Include="js-xlsx-master\bits\02_codepage.js" />
+    <Content Include="js-xlsx-master\bits\03_consts.js" />
+    <Content Include="js-xlsx-master\bits\04_base64.js" />
+    <Content Include="js-xlsx-master\bits\05_buf.js" />
+    <Content Include="js-xlsx-master\bits\09_types.js" />
+    <Content Include="js-xlsx-master\bits\10_ssf.js" />
+    <Content Include="js-xlsx-master\bits\11_ssfutils.js" />
+    <Content Include="js-xlsx-master\bits\18_cfb.js" />
+    <Content Include="js-xlsx-master\bits\19_fsutils.js" />
+    <Content Include="js-xlsx-master\bits\20_jsutils.js" />
+    <Content Include="js-xlsx-master\bits\21_ziputils.js" />
+    <Content Include="js-xlsx-master\bits\22_xmlutils.js" />
+    <Content Include="js-xlsx-master\bits\23_binutils.js" />
+    <Content Include="js-xlsx-master\bits\24_hoppers.js" />
+    <Content Include="js-xlsx-master\bits\25_cellutils.js" />
+    <Content Include="js-xlsx-master\bits\26_crypto.js" />
+    <Content Include="js-xlsx-master\bits\27_csfutils.js" />
+    <Content Include="js-xlsx-master\bits\28_binstructs.js" />
+    <Content Include="js-xlsx-master\bits\29_xlsenum.js" />
+    <Content Include="js-xlsx-master\bits\30_ctype.js" />
+    <Content Include="js-xlsx-master\bits\31_rels.js" />
+    <Content Include="js-xlsx-master\bits\32_odmanrdf.js" />
+    <Content Include="js-xlsx-master\bits\33_coreprops.js" />
+    <Content Include="js-xlsx-master\bits\34_extprops.js" />
+    <Content Include="js-xlsx-master\bits\35_custprops.js" />
+    <Content Include="js-xlsx-master\bits\36_xlsprops.js" />
+    <Content Include="js-xlsx-master\bits\38_xlstypes.js" />
+    <Content Include="js-xlsx-master\bits\39_xlsbiff.js" />
+    <Content Include="js-xlsx-master\bits\40_harb.js" />
+    <Content Include="js-xlsx-master\bits\41_lotus.js" />
+    <Content Include="js-xlsx-master\bits\42_sstxml.js" />
+    <Content Include="js-xlsx-master\bits\43_sstbin.js" />
+    <Content Include="js-xlsx-master\bits\44_offcrypto.js" />
+    <Content Include="js-xlsx-master\bits\45_rtf.js" />
+    <Content Include="js-xlsx-master\bits\46_stycommon.js" />
+    <Content Include="js-xlsx-master\bits\47_styxml.js" />
+    <Content Include="js-xlsx-master\bits\48_stybin.js" />
+    <Content Include="js-xlsx-master\bits\49_theme.js" />
+    <Content Include="js-xlsx-master\bits\50_styxls.js" />
+    <Content Include="js-xlsx-master\bits\52_calcchain.js" />
+    <Content Include="js-xlsx-master\bits\53_externlink.js" />
+    <Content Include="js-xlsx-master\bits\54_drawing.js" />
+    <Content Include="js-xlsx-master\bits\55_vml.js" />
+    <Content Include="js-xlsx-master\bits\56_cmntcommon.js" />
+    <Content Include="js-xlsx-master\bits\57_cmntxml.js" />
+    <Content Include="js-xlsx-master\bits\58_cmntbin.js" />
+    <Content Include="js-xlsx-master\bits\59_vba.js" />
+    <Content Include="js-xlsx-master\bits\60_macrovba.js" />
+    <Content Include="js-xlsx-master\bits\61_fcommon.js" />
+    <Content Include="js-xlsx-master\bits\62_fxls.js" />
+    <Content Include="js-xlsx-master\bits\63_fbin.js" />
+    <Content Include="js-xlsx-master\bits\64_ftab.js" />
+    <Content Include="js-xlsx-master\bits\65_fods.js" />
+    <Content Include="js-xlsx-master\bits\66_wscommon.js" />
+    <Content Include="js-xlsx-master\bits\67_wsxml.js" />
+    <Content Include="js-xlsx-master\bits\68_wsbin.js" />
+    <Content Include="js-xlsx-master\bits\69_chartxml.js" />
+    <Content Include="js-xlsx-master\bits\70_csheet.js" />
+    <Content Include="js-xlsx-master\bits\71_wbcommon.js" />
+    <Content Include="js-xlsx-master\bits\72_wbxml.js" />
+    <Content Include="js-xlsx-master\bits\73_wbbin.js" />
+    <Content Include="js-xlsx-master\bits\74_xmlbin.js" />
+    <Content Include="js-xlsx-master\bits\75_xlml.js" />
+    <Content Include="js-xlsx-master\bits\76_xls.js" />
+    <Content Include="js-xlsx-master\bits\77_parsetab.js" />
+    <Content Include="js-xlsx-master\bits\78_writebiff.js" />
+    <Content Include="js-xlsx-master\bits\79_html.js" />
+    <Content Include="js-xlsx-master\bits\80_parseods.js" />
+    <Content Include="js-xlsx-master\bits\81_writeods.js" />
+    <Content Include="js-xlsx-master\bits\82_sheeter.js" />
+    <Content Include="js-xlsx-master\bits\84_defaults.js" />
+    <Content Include="js-xlsx-master\bits\85_parsezip.js" />
+    <Content Include="js-xlsx-master\bits\86_writezip.js" />
+    <Content Include="js-xlsx-master\bits\87_read.js" />
+    <Content Include="js-xlsx-master\bits\88_write.js" />
+    <Content Include="js-xlsx-master\bits\90_utils.js" />
+    <Content Include="js-xlsx-master\bits\95_api.js" />
+    <Content Include="js-xlsx-master\bits\97_node.js" />
+    <Content Include="js-xlsx-master\bits\98_exports.js" />
+    <Content Include="js-xlsx-master\bits\99_footer.js" />
+    <Content Include="js-xlsx-master\demos\altjs\chakra.js" />
+    <Content Include="js-xlsx-master\demos\altjs\com\sheetjs\JSHelper.java" />
+    <Content Include="js-xlsx-master\demos\altjs\com\sheetjs\ObjectNotFoundException.java" />
+    <Content Include="js-xlsx-master\demos\altjs\com\sheetjs\SheetJS.java" />
+    <Content Include="js-xlsx-master\demos\altjs\com\sheetjs\SheetJSFile.java" />
+    <Content Include="js-xlsx-master\demos\altjs\com\sheetjs\SheetJSSheet.java" />
+    <Content Include="js-xlsx-master\demos\altjs\global.js" />
+    <Content Include="js-xlsx-master\demos\altjs\nashorn.js" />
+    <Content Include="js-xlsx-master\demos\altjs\sheetjs.duk.c" />
+    <Content Include="js-xlsx-master\demos\altjs\SheetJSRhino.java" />
+    <Content Include="js-xlsx-master\demos\angular2\screen.png" />
+    <Content Include="js-xlsx-master\demos\angular2\src\index.html" />
+    <Content Include="js-xlsx-master\demos\angular\app.js" />
+    <Content Include="js-xlsx-master\demos\angular\grid.html" />
+    <Content Include="js-xlsx-master\demos\angular\index.html" />
+    <Content Include="js-xlsx-master\demos\angular\SheetJS-angular.js" />
+    <Content Include="js-xlsx-master\demos\angular\shim.js" />
+    <Content Include="js-xlsx-master\demos\angular\xlsx.core.min.js" />
+    <Content Include="js-xlsx-master\demos\angular\xlsx.full.min.js" />
+    <Content Include="js-xlsx-master\demos\array\linest.js" />
+    <Content Include="js-xlsx-master\demos\array\propel.js" />
+    <Content Include="js-xlsx-master\demos\array\tf.js" />
+    <Content Include="js-xlsx-master\demos\browserify\app.js" />
+    <Content Include="js-xlsx-master\demos\browserify\browserify.html" />
+    <Content Include="js-xlsx-master\demos\browserify\xlsxworker.js" />
+    <Content Include="js-xlsx-master\demos\chrome\content.js" />
+    <Content Include="js-xlsx-master\demos\chrome\popup.html" />
+    <Content Include="js-xlsx-master\demos\chrome\popup.js" />
+    <Content Include="js-xlsx-master\demos\chrome\table.js" />
+    <Content Include="js-xlsx-master\demos\database\FirebaseDemo.html" />
+    <Content Include="js-xlsx-master\demos\database\FirebaseTest.js" />
+    <Content Include="js-xlsx-master\demos\database\KnexTest.js" />
+    <Content Include="js-xlsx-master\demos\database\LocalForage.html" />
+    <Content Include="js-xlsx-master\demos\database\LocalStorage.html" />
+    <Content Include="js-xlsx-master\demos\database\LowDBTest.js" />
+    <Content Include="js-xlsx-master\demos\database\MongoDBCRUD.js" />
+    <Content Include="js-xlsx-master\demos\database\MongoDBTest.js" />
+    <Content Include="js-xlsx-master\demos\database\MySQLTest.js" />
+    <Content Include="js-xlsx-master\demos\database\ObjUtils.js" />
+    <Content Include="js-xlsx-master\demos\database\PgSQLTest.js" />
+    <Content Include="js-xlsx-master\demos\database\RedisTest.js" />
+    <Content Include="js-xlsx-master\demos\database\SheetJSForage.js" />
+    <Content Include="js-xlsx-master\demos\database\SheetJSKnex.js" />
+    <Content Include="js-xlsx-master\demos\database\SheetJSLowDB.js" />
+    <Content Include="js-xlsx-master\demos\database\SheetJSMongo.js" />
+    <Content Include="js-xlsx-master\demos\database\SheetJSRedis.js" />
+    <Content Include="js-xlsx-master\demos\database\SheetJSSQL.js" />
+    <Content Include="js-xlsx-master\demos\database\SheetJSStorage.js" />
+    <Content Include="js-xlsx-master\demos\database\SQLiteTest.js" />
+    <Content Include="js-xlsx-master\demos\database\xlsx.full.min.js" />
+    <Content Include="js-xlsx-master\demos\datagrid\index.html" />
+    <Content Include="js-xlsx-master\demos\datagrid\shim.js" />
+    <Content Include="js-xlsx-master\demos\datagrid\xlsx.full.min.js" />
+    <Content Include="js-xlsx-master\demos\electron\index.html" />
+    <Content Include="js-xlsx-master\demos\electron\index.js" />
+    <Content Include="js-xlsx-master\demos\electron\main.js" />
+    <Content Include="js-xlsx-master\demos\extendscript\aftereffects.jsx" />
+    <Content Include="js-xlsx-master\demos\extendscript\estoolkit.jsx" />
+    <Content Include="js-xlsx-master\demos\extendscript\illustrator.jsx" />
+    <Content Include="js-xlsx-master\demos\extendscript\indesign.jsx" />
+    <Content Include="js-xlsx-master\demos\extendscript\photoshop.jsx" />
+    <Content Include="js-xlsx-master\demos\extendscript\test.jsx" />
+    <Content Include="js-xlsx-master\demos\function\AzureHTTPTrigger\index.js" />
+    <Content Include="js-xlsx-master\demos\function\LambdaProxy\index.js" />
+    <Content Include="js-xlsx-master\demos\function\mcstream.js" />
+    <Content Include="js-xlsx-master\demos\fusebox\fuse.js" />
+    <Content Include="js-xlsx-master\demos\fusebox\index.html" />
+    <Content Include="js-xlsx-master\demos\headless\chromeless.js" />
+    <Content Include="js-xlsx-master\demos\headless\phantomjs.js" />
+    <Content Include="js-xlsx-master\demos\headless\puppeteer.js" />
+    <Content Include="js-xlsx-master\demos\headless\slimerjs.js" />
+    <Content Include="js-xlsx-master\demos\knockout\index.html" />
+    <Content Include="js-xlsx-master\demos\knockout\shim.js" />
+    <Content Include="js-xlsx-master\demos\knockout\xlsx.full.min.js" />
+    <Content Include="js-xlsx-master\demos\meteor\client\main.css" />
+    <Content Include="js-xlsx-master\demos\meteor\client\main.html" />
+    <Content Include="js-xlsx-master\demos\meteor\client\main.js" />
+    <Content Include="js-xlsx-master\demos\meteor\server\main.js" />
+    <Content Include="js-xlsx-master\demos\nwjs\index.html" />
+    <Content Include="js-xlsx-master\demos\nwjs\index.js" />
+    <Content Include="js-xlsx-master\demos\nwjs\xlsx.full.min.js" />
+    <Content Include="js-xlsx-master\demos\oldie\base64.min.js" />
+    <Content Include="js-xlsx-master\demos\oldie\download.png" />
+    <Content Include="js-xlsx-master\demos\oldie\downloadify.min.js" />
+    <Content Include="js-xlsx-master\demos\oldie\downloadify.swf" />
+    <Content Include="js-xlsx-master\demos\oldie\index.html" />
+    <Content Include="js-xlsx-master\demos\oldie\shim.min.js" />
+    <Content Include="js-xlsx-master\demos\oldie\swfobject.js" />
+    <Content Include="js-xlsx-master\demos\oldie\xlsx.full.min.js" />
+    <Content Include="js-xlsx-master\demos\parcel\index.html" />
+    <Content Include="js-xlsx-master\demos\parcel\index.js" />
+    <Content Include="js-xlsx-master\demos\react\index.html" />
+    <Content Include="js-xlsx-master\demos\react\nexthdr.js" />
+    <Content Include="js-xlsx-master\demos\react\pages\index.js" />
+    <Content Include="js-xlsx-master\demos\react\preact.html" />
+    <Content Include="js-xlsx-master\demos\react\react-native.js" />
+    <Content Include="js-xlsx-master\demos\react\screen.png" />
+    <Content Include="js-xlsx-master\demos\react\sheetjs.jsx" />
+    <Content Include="js-xlsx-master\demos\requirejs\app.js" />
+    <Content Include="js-xlsx-master\demos\requirejs\browser.html" />
+    <Content Include="js-xlsx-master\demos\requirejs\build.js" />
+    <Content Include="js-xlsx-master\demos\requirejs\optimizer.html" />
+    <Content Include="js-xlsx-master\demos\rollup\app.js" />
+    <Content Include="js-xlsx-master\demos\rollup\main.js" />
+    <Content Include="js-xlsx-master\demos\rollup\rollup.config.js" />
+    <Content Include="js-xlsx-master\demos\rollup\rollup.config.node.js" />
+    <Content Include="js-xlsx-master\demos\rollup\rollup.config.worker.js" />
+    <Content Include="js-xlsx-master\demos\rollup\rollup.html" />
+    <Content Include="js-xlsx-master\demos\rollup\xlsxworker.js" />
+    <Content Include="js-xlsx-master\demos\server\express.js" />
+    <Content Include="js-xlsx-master\demos\server\hapi.js" />
+    <Content Include="js-xlsx-master\demos\server\koa.js" />
+    <Content Include="js-xlsx-master\demos\server\koasub.js" />
+    <Content Include="js-xlsx-master\demos\server\micro.js" />
+    <Content Include="js-xlsx-master\demos\server\node.js" />
+    <Content Include="js-xlsx-master\demos\server\worker.js" />
+    <Content Include="js-xlsx-master\demos\server\_cors.js" />
+    <Content Include="js-xlsx-master\demos\server\_logit.js" />
+    <Content Include="js-xlsx-master\demos\server\_request.js" />
+    <Content Include="js-xlsx-master\demos\systemjs\app.node.js" />
+    <Content Include="js-xlsx-master\demos\systemjs\main.js" />
+    <Content Include="js-xlsx-master\demos\systemjs\main.simple.js" />
+    <Content Include="js-xlsx-master\demos\systemjs\simple.html" />
+    <Content Include="js-xlsx-master\demos\systemjs\systemjs.html" />
+    <Content Include="js-xlsx-master\demos\systemjs\test.node.js" />
+    <Content Include="js-xlsx-master\demos\systemjs\worker.js" />
+    <Content Include="js-xlsx-master\demos\systemjs\xlsxworker.js" />
+    <Content Include="js-xlsx-master\demos\typescript\demo.js" />
+    <Content Include="js-xlsx-master\demos\typescript\index.html" />
+    <Content Include="js-xlsx-master\demos\typescript\src\index.js" />
+    <Content Include="js-xlsx-master\demos\vue\index.html" />
+    <Content Include="js-xlsx-master\demos\vue\nuxt.config.js" />
+    <Content Include="js-xlsx-master\demos\vue\screen.png" />
+    <Content Include="js-xlsx-master\demos\vue\SheetJS-vue.js" />
+    <Content Include="js-xlsx-master\demos\vue\shim.js" />
+    <Content Include="js-xlsx-master\demos\vue\static\shim.js" />
+    <Content Include="js-xlsx-master\demos\vue\static\xlsx.full.min.js" />
+    <Content Include="js-xlsx-master\demos\vue\xlsx.full.min.js" />
+    <Content Include="js-xlsx-master\demos\webpack\app.js" />
+    <Content Include="js-xlsx-master\demos\webpack\appworker.js" />
+    <Content Include="js-xlsx-master\demos\webpack\core.html" />
+    <Content Include="js-xlsx-master\demos\webpack\core.js" />
+    <Content Include="js-xlsx-master\demos\webpack\coreworker.js" />
+    <Content Include="js-xlsx-master\demos\webpack\full.html" />
+    <Content Include="js-xlsx-master\demos\webpack\full.js" />
+    <Content Include="js-xlsx-master\demos\webpack\fullworker.js" />
+    <Content Include="js-xlsx-master\demos\webpack\main.html" />
+    <Content Include="js-xlsx-master\demos\webpack\main.js" />
+    <Content Include="js-xlsx-master\demos\webpack\mainworker.js" />
+    <Content Include="js-xlsx-master\demos\webpack\webpack.app.js" />
+    <Content Include="js-xlsx-master\demos\webpack\webpack.config.js" />
+    <Content Include="js-xlsx-master\demos\webpack\xlsx.core.min.js" />
+    <Content Include="js-xlsx-master\demos\webpack\xlsx.full.min.js" />
+    <Content Include="js-xlsx-master\demos\xhr\axios.html" />
+    <Content Include="js-xlsx-master\demos\xhr\fetch.html" />
+    <Content Include="js-xlsx-master\demos\xhr\server.js" />
+    <Content Include="js-xlsx-master\demos\xhr\superagent.html" />
+    <Content Include="js-xlsx-master\demos\xhr\xhr.html" />
+    <Content Include="js-xlsx-master\demos\xhr\xlsx.full.min.js" />
+    <Content Include="js-xlsx-master\dist\cpexcel.js" />
+    <Content Include="js-xlsx-master\dist\jszip.js" />
+    <Content Include="js-xlsx-master\dist\shim.min.js" />
+    <Content Include="js-xlsx-master\dist\xlsx.core.min.js" />
+    <Content Include="js-xlsx-master\dist\xlsx.extendscript.js" />
+    <Content Include="js-xlsx-master\dist\xlsx.full.min.js" />
+    <Content Include="js-xlsx-master\dist\xlsx.js" />
+    <Content Include="js-xlsx-master\dist\xlsx.min.js" />
+    <Content Include="js-xlsx-master\formats.png" />
+    <Content Include="js-xlsx-master\index.html" />
+    <Content Include="js-xlsx-master\jszip.js" />
+    <Content Include="js-xlsx-master\legend.png" />
+    <Content Include="js-xlsx-master\misc\docs\formats.png" />
+    <Content Include="js-xlsx-master\misc\docs\legend.png" />
+    <Content Include="js-xlsx-master\misc\docs\style.css" />
+    <Content Include="js-xlsx-master\misc\flow.js" />
+    <Content Include="js-xlsx-master\misc\flowdeps.js" />
+    <Content Include="js-xlsx-master\misc\prof.js" />
+    <Content Include="js-xlsx-master\misc\strip_flow.js" />
+    <Content Include="js-xlsx-master\misc\suppress_export.js" />
+    <Content Include="js-xlsx-master\multiformat.lst" />
+    <Content Include="js-xlsx-master\shim.js" />
+    <Content Include="js-xlsx-master\test.js" />
+    <Content Include="js-xlsx-master\tests.lst" />
+    <Content Include="js-xlsx-master\tests\base64.js" />
+    <Content Include="js-xlsx-master\tests\core.js" />
+    <Content Include="js-xlsx-master\tests\fixtures.js" />
+    <Content Include="js-xlsx-master\tests\fixtures.lst" />
+    <Content Include="js-xlsx-master\tests\fs_.js" />
+    <Content Include="js-xlsx-master\tests\index.html" />
+    <Content Include="js-xlsx-master\tests\make_fixtures.js" />
+    <Content Include="js-xlsx-master\tests\mocha.css" />
+    <Content Include="js-xlsx-master\tests\mocha.js" />
+    <Content Include="js-xlsx-master\tests\sauce.html" />
+    <Content Include="js-xlsx-master\tests\shim.js" />
+    <Content Include="js-xlsx-master\tests\testA.lst" />
+    <Content Include="js-xlsx-master\tests\write.html" />
+    <Content Include="js-xlsx-master\tests\write.js" />
+    <Content Include="js-xlsx-master\tests\xlsx.core.min.js" />
+    <Content Include="js-xlsx-master\tests\xlsx.full.min.js" />
+    <Content Include="js-xlsx-master\xlsx.flow.js" />
+    <Content Include="js-xlsx-master\xlsx.js" />
+    <Content Include="js-xlsx-master\xlsxworker.flow.js" />
+    <Content Include="js-xlsx-master\xlsxworker.js" />
+    <Content Include="StyleSheet1.css" />
+    <Content Include="Web.config" />
+    <Content Include="xlsx.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js-xlsx-master\.eslintrc" />
+    <Content Include="js-xlsx-master\.flowconfig" />
+    <Content Include="js-xlsx-master\.fossaignore" />
+    <Content Include="js-xlsx-master\.gitattributes" />
+    <Content Include="js-xlsx-master\.gitignore" />
+    <Content Include="js-xlsx-master\.gitmodules" />
+    <Content Include="js-xlsx-master\.jscs.json" />
+    <Content Include="js-xlsx-master\.jshintrc" />
+    <Content Include="js-xlsx-master\.npmignore" />
+    <Content Include="js-xlsx-master\.spelling" />
+    <Content Include="js-xlsx-master\.travis.yml" />
+    <Content Include="js-xlsx-master\bin\xlsx.njs" />
+    <Content Include="js-xlsx-master\bits\.npmignore" />
+    <Content Include="js-xlsx-master\book.json" />
+    <Content Include="js-xlsx-master\bower.json" />
+    <Content Include="js-xlsx-master\CHANGELOG.md" />
+    <Content Include="js-xlsx-master\CONTRIBUTING.md" />
+    <Content Include="js-xlsx-master\demos\altjs\.gitignore" />
+    <Content Include="js-xlsx-master\demos\altjs\.swiftlint.yml" />
+    <Content Include="js-xlsx-master\demos\altjs\duktape.sh" />
+    <Content Include="js-xlsx-master\demos\altjs\goja.go" />
+    <Content Include="js-xlsx-master\demos\altjs\main.swift" />
+    <Content Include="js-xlsx-master\demos\altjs\Makefile" />
+    <Content Include="js-xlsx-master\demos\altjs\README.md" />
+    <Content Include="js-xlsx-master\demos\altjs\SheetJSCore.swift" />
+    <Content Include="js-xlsx-master\demos\altjs\SJSPlayground.swift" />
+    <Content Include="js-xlsx-master\demos\angular2\.angular-cli.json" />
+    <Content Include="js-xlsx-master\demos\angular2\.gitignore" />
+    <Content Include="js-xlsx-master\demos\angular2\ionic.sh" />
+    <Content Include="js-xlsx-master\demos\angular2\Makefile" />
+    <Content Include="js-xlsx-master\demos\angular2\nscript.sh" />
+    <Content Include="js-xlsx-master\demos\angular2\package.json" />
+    <Content Include="js-xlsx-master\demos\angular2\package.json-angular2" />
+    <Content Include="js-xlsx-master\demos\angular2\package.json-angular4" />
+    <Content Include="js-xlsx-master\demos\angular2\package.json-angular5" />
+    <Content Include="js-xlsx-master\demos\angular2\README.md" />
+    <Content Include="js-xlsx-master\demos\angular2\src\tsconfig.app.json" />
+    <Content Include="js-xlsx-master\demos\angular2\tsconfig.json" />
+    <Content Include="js-xlsx-master\demos\angular\README.md" />
+    <Content Include="js-xlsx-master\demos\array\Makefile" />
+    <Content Include="js-xlsx-master\demos\array\README.md" />
+    <Content Include="js-xlsx-master\demos\browserify\.gitignore" />
+    <Content Include="js-xlsx-master\demos\browserify\Makefile" />
+    <Content Include="js-xlsx-master\demos\browserify\README.md" />
+    <Content Include="js-xlsx-master\demos\chrome\.gitignore" />
+    <Content Include="js-xlsx-master\demos\chrome\Makefile" />
+    <Content Include="js-xlsx-master\demos\chrome\manifest.json" />
+    <Content Include="js-xlsx-master\demos\chrome\README.md" />
+    <Content Include="js-xlsx-master\demos\database\.eslintrc" />
+    <Content Include="js-xlsx-master\demos\database\.gitignore" />
+    <Content Include="js-xlsx-master\demos\database\Makefile" />
+    <Content Include="js-xlsx-master\demos\database\README.md" />
+    <Content Include="js-xlsx-master\demos\datagrid\README.md" />
+    <Content Include="js-xlsx-master\demos\electron\.eslintrc" />
+    <Content Include="js-xlsx-master\demos\electron\Makefile" />
+    <Content Include="js-xlsx-master\demos\electron\package.json" />
+    <Content Include="js-xlsx-master\demos\electron\README.md" />
+    <Content Include="js-xlsx-master\demos\extendscript\.gitignore" />
+    <Content Include="js-xlsx-master\demos\extendscript\aftereffects.base" />
+    <Content Include="js-xlsx-master\demos\extendscript\estoolkit.base" />
+    <Content Include="js-xlsx-master\demos\extendscript\illustrator.base" />
+    <Content Include="js-xlsx-master\demos\extendscript\indesign.base" />
+    <Content Include="js-xlsx-master\demos\extendscript\Makefile" />
+    <Content Include="js-xlsx-master\demos\extendscript\photoshop.base" />
+    <Content Include="js-xlsx-master\demos\extendscript\README.md" />
+    <Content Include="js-xlsx-master\demos\extendscript\sheetjs.xlsx" />
+    <Content Include="js-xlsx-master\demos\function\.eslintrc" />
+    <Content Include="js-xlsx-master\demos\function\AzureHTTPTrigger\function.json" />
+    <Content Include="js-xlsx-master\demos\function\host.json" />
+    <Content Include="js-xlsx-master\demos\function\LambdaProxy\template.yaml" />
+    <Content Include="js-xlsx-master\demos\function\local.settings.json" />
+    <Content Include="js-xlsx-master\demos\function\Makefile" />
+    <Content Include="js-xlsx-master\demos\function\README.md" />
+    <Content Include="js-xlsx-master\demos\fusebox\.gitignore" />
+    <Content Include="js-xlsx-master\demos\fusebox\Makefile" />
+    <Content Include="js-xlsx-master\demos\fusebox\README.md" />
+    <Content Include="js-xlsx-master\demos\headless\.gitignore" />
+    <Content Include="js-xlsx-master\demos\headless\README.md" />
+    <Content Include="js-xlsx-master\demos\headless\sheetjs.xlsx" />
+    <Content Include="js-xlsx-master\demos\knockout\README.md" />
+    <Content Include="js-xlsx-master\demos\meteor\.gitignore" />
+    <Content Include="js-xlsx-master\demos\meteor\Makefile" />
+    <Content Include="js-xlsx-master\demos\meteor\package.json" />
+    <Content Include="js-xlsx-master\demos\meteor\README.md" />
+    <Content Include="js-xlsx-master\demos\nwjs\Makefile" />
+    <Content Include="js-xlsx-master\demos\nwjs\package.json" />
+    <Content Include="js-xlsx-master\demos\nwjs\README.md" />
+    <Content Include="js-xlsx-master\demos\oldie\README.md" />
+    <Content Include="js-xlsx-master\demos\parcel\.gitignore" />
+    <Content Include="js-xlsx-master\demos\parcel\Makefile" />
+    <Content Include="js-xlsx-master\demos\parcel\README.md" />
+    <Content Include="js-xlsx-master\demos\react\.gitignore" />
+    <Content Include="js-xlsx-master\demos\react\Makefile" />
+    <Content Include="js-xlsx-master\demos\react\native.sh" />
+    <Content Include="js-xlsx-master\demos\react\pages\.gitignore" />
+    <Content Include="js-xlsx-master\demos\react\README.md" />
+    <Content Include="js-xlsx-master\demos\README.md" />
+    <Content Include="js-xlsx-master\demos\requirejs\.gitignore" />
+    <Content Include="js-xlsx-master\demos\requirejs\Makefile" />
+    <Content Include="js-xlsx-master\demos\requirejs\README.md" />
+    <Content Include="js-xlsx-master\demos\rollup\.gitignore" />
+    <Content Include="js-xlsx-master\demos\rollup\Makefile" />
+    <Content Include="js-xlsx-master\demos\rollup\README.md" />
+    <Content Include="js-xlsx-master\demos\server\.gitignore" />
+    <Content Include="js-xlsx-master\demos\server\Makefile" />
+    <Content Include="js-xlsx-master\demos\server\README.md" />
+    <Content Include="js-xlsx-master\demos\systemjs\.gitignore" />
+    <Content Include="js-xlsx-master\demos\systemjs\Makefile" />
+    <Content Include="js-xlsx-master\demos\systemjs\README.md" />
+    <Content Include="js-xlsx-master\demos\typescript\.gitignore" />
+    <Content Include="js-xlsx-master\demos\typescript\Makefile" />
+    <Content Include="js-xlsx-master\demos\typescript\package.json" />
+    <Content Include="js-xlsx-master\demos\typescript\README.md" />
+    <Content Include="js-xlsx-master\demos\typescript\tsconfig.json" />
+    <Content Include="js-xlsx-master\demos\typescript\tslint.json" />
+    <Content Include="js-xlsx-master\demos\vue\.gitignore" />
+    <Content Include="js-xlsx-master\demos\vue\Makefile" />
+    <Content Include="js-xlsx-master\demos\vue\native.vue" />
+    <Content Include="js-xlsx-master\demos\vue\package.json" />
+    <Content Include="js-xlsx-master\demos\vue\pages\index.vue" />
+    <Content Include="js-xlsx-master\demos\vue\README.md" />
+    <Content Include="js-xlsx-master\demos\vue\weex.sh" />
+    <Content Include="js-xlsx-master\demos\webpack\.gitignore" />
+    <Content Include="js-xlsx-master\demos\webpack\Makefile" />
+    <Content Include="js-xlsx-master\demos\webpack\README.md" />
+    <Content Include="js-xlsx-master\demos\xhr\.gitignore" />
+    <Content Include="js-xlsx-master\demos\xhr\Makefile" />
+    <Content Include="js-xlsx-master\demos\xhr\package.json" />
+    <Content Include="js-xlsx-master\demos\xhr\README.md" />
+    <Content Include="js-xlsx-master\dist\LICENSE" />
+    <Content Include="js-xlsx-master\dist\xlsx.core.min.map" />
+    <Content Include="js-xlsx-master\dist\xlsx.full.min.map" />
+    <Content Include="js-xlsx-master\dist\xlsx.min.map" />
+    <Content Include="js-xlsx-master\docbits\00_intro.md" />
+    <Content Include="js-xlsx-master\docbits\01_toc.md" />
+    <Content Include="js-xlsx-master\docbits\10_install.md" />
+    <Content Include="js-xlsx-master\docbits\11_demos.md" />
+    <Content Include="js-xlsx-master\docbits\12_optional.md" />
+    <Content Include="js-xlsx-master\docbits\15_phil.md" />
+    <Content Include="js-xlsx-master\docbits\20_import.md" />
+    <Content Include="js-xlsx-master\docbits\21_readstream.md" />
+    <Content Include="js-xlsx-master\docbits\25_manip.md" />
+    <Content Include="js-xlsx-master\docbits\30_export.md" />
+    <Content Include="js-xlsx-master\docbits\31_writestream.md" />
+    <Content Include="js-xlsx-master\docbits\40_interface.md" />
+    <Content Include="js-xlsx-master\docbits\50_csf.md" />
+    <Content Include="js-xlsx-master\docbits\51_cell.md" />
+    <Content Include="js-xlsx-master\docbits\52_datatype.md" />
+    <Content Include="js-xlsx-master\docbits\53_wsobject.md" />
+    <Content Include="js-xlsx-master\docbits\54_shobject.md" />
+    <Content Include="js-xlsx-master\docbits\55_wbobject.md" />
+    <Content Include="js-xlsx-master\docbits\56_wbprops.md" />
+    <Content Include="js-xlsx-master\docbits\57_wbbook.md" />
+    <Content Include="js-xlsx-master\docbits\60_features.md" />
+    <Content Include="js-xlsx-master\docbits\61_formulae.md" />
+    <Content Include="js-xlsx-master\docbits\62_colrow.md" />
+    <Content Include="js-xlsx-master\docbits\63_numfmt.md" />
+    <Content Include="js-xlsx-master\docbits\64_cellprops.md" />
+    <Content Include="js-xlsx-master\docbits\66_comments.md" />
+    <Content Include="js-xlsx-master\docbits\73_sheetprops.md" />
+    <Content Include="js-xlsx-master\docbits\77_macrovba.md" />
+    <Content Include="js-xlsx-master\docbits\80_parseopts.md" />
+    <Content Include="js-xlsx-master\docbits\81_writeopts.md" />
+    <Content Include="js-xlsx-master\docbits\82_util.md" />
+    <Content Include="js-xlsx-master\docbits\85_filetype.md" />
+    <Content Include="js-xlsx-master\docbits\90_test.md" />
+    <Content Include="js-xlsx-master\docbits\95_contrib.md" />
+    <Content Include="js-xlsx-master\docbits\97_license.md" />
+    <Content Include="js-xlsx-master\docbits\98_reference.md" />
+    <Content Include="js-xlsx-master\formats.dot" />
+    <Content Include="js-xlsx-master\LICENSE" />
+    <Content Include="js-xlsx-master\make.cmd" />
+    <Content Include="js-xlsx-master\Makefile" />
+    <Content Include="js-xlsx-master\misc\docs\README.md" />
+    <Content Include="js-xlsx-master\misc\docs\SUMMARY.md" />
+    <Content Include="js-xlsx-master\misc\help.sh" />
+    <Content Include="js-xlsx-master\misc\legend.dot" />
+    <Content Include="js-xlsx-master\misc\spin.sh" />
+    <Content Include="js-xlsx-master\misc\ssf.json" />
+    <Content Include="js-xlsx-master\misc\strip_sourcemap.sh" />
+    <Content Include="js-xlsx-master\package.json" />
+    <Content Include="js-xlsx-master\README.md" />
+    <Content Include="js-xlsx-master\types\.npmignore" />
+    <Content Include="js-xlsx-master\types\Makefile" />
+    <Content Include="js-xlsx-master\types\tsconfig.json" />
+    <Content Include="js-xlsx-master\types\tslint.json" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
+    <Folder Include="js-xlsx-master\test_files\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="js-xlsx-master\demos\angular2\ionic.ts" />
+    <TypeScriptCompile Include="js-xlsx-master\demos\angular2\nscript.ts" />
+    <TypeScriptCompile Include="js-xlsx-master\demos\angular2\nsmain.ts" />
+    <TypeScriptCompile Include="js-xlsx-master\demos\angular2\src\app\app.module.ts" />
+    <TypeScriptCompile Include="js-xlsx-master\demos\angular2\src\app\sheetjs.component.ts" />
+    <TypeScriptCompile Include="js-xlsx-master\demos\angular2\src\main.ts" />
+    <TypeScriptCompile Include="js-xlsx-master\demos\angular2\src\polyfills.ts" />
+    <TypeScriptCompile Include="js-xlsx-master\demos\fusebox\sheetjs.ts" />
+    <TypeScriptCompile Include="js-xlsx-master\demos\typescript\lib\index.ts" />
+    <TypeScriptCompile Include="js-xlsx-master\types\bin_xlsx.ts" />
+    <TypeScriptCompile Include="js-xlsx-master\types\doc.ts" />
+    <TypeScriptCompile Include="js-xlsx-master\types\index.d.ts" />
+    <TypeScriptCompile Include="js-xlsx-master\types\write.ts" />
+    <TypeScriptCompile Include="js-xlsx-master\types\xlsx-tests.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51297</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51297/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Learning to code</title>
+
+    <script src="jquery.js"></script>
+    <script lang="javascript" src="js-xlsx-master/dist/xlsx.full.min.js"></script>
+    <script lang="javascript" src="FileSaver.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" rel="text/javascript" />
+    <link href="StyleSheet1.css" rel=" stylesheet" />
+    <script src="JavaScript.js" type="application/javascript"></script>
+
+</head>
+
+
+    <body class="container-fluid">
+    
+        <h1>What number is this?</h1>
+
+        <div class="row">
+            <aside class="col-sm-3">
+                <article><a href="#contact">Jump to contact</a></article>
+            </aside>
+
+            <aside class="col-sm-3">
+                <p><a href="http://www.bing.com">It was the best of times, it was the blurst of times</a></p>
+                <h2><a name="contact" ; href="Contact.html">Contact page</a></h2>
+            </aside>
+        </div>
+
+
+        <div class="row">
+            <p>
+                <input type="button" id="button" onclick="hold(1);" value="1" />
+                <input type="button" id="button" onclick="hold(2);" value="2" />
+                <input type="button" id="button" onclick="hold(3);" value="3" />
+            </p>
+        </div>
+        <div class="row">
+            <p>
+                <input type="button" id="button" onclick="hold(4);" value="4" />
+                <input type="button" id="button" onclick="hold(5);" value="5" />
+                <input type="button" id="button" onclick="hold(6);" value="6" />
+            </p>
+        </div>
+        <div class="row">
+            <p>
+                <input type="button" id="button" onclick="hold(7);" value="7"  />
+                <input type="button" id="button" onclick="hold(8);" value="8" />
+                <input type="button" id="button" onclick="hold(9);" value="9" />
+            </p>
+        </div>
+    
+  
+
+   
+        <div class="row">
+            <input type="text" id="is7" value="Is this a 7?" />
+            <input type="button" onclick="pushToExcel();" value="Push to excel" />
+            <input type="button" onclick="showArray();" value="show array" />
+            <input type="button" onclick="addData();" value="Add Data" />
+            <input type="button" onclick="showCurrentValues();" value="Show current values" />
+
+
+        </div>
+   </body>
+</html>

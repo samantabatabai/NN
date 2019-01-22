@@ -1,0 +1,28 @@
+﻿body {
+    
+}
+
+h1{
+    padding: 20px;
+    background-color: rosybrown;
+    text-align: center;
+}
+
+#button {
+    background-color: forestgreen;
+    border: 1px solid green;
+    padding: 40px;
+    float: left;
+    display: block;
+}
+
+#button:hover {
+
+    background-color: aquamarine;
+}
+
+#button:visited {
+    background-color: yellow;
+}
+
+
